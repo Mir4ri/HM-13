@@ -1,0 +1,44 @@
+$icon_size: 20px;
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+    h1 {
+        color: $main_yellow_color;
+        margin: 0;
+        font-size: 60px;
+        font-family: 'Roboto', sans-serif;
+    }
+    h2 {
+        color: $main_grey_color;
+        font-size: 16px;
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+    }
+    .separator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        @mixin sep_line {
+                content: "";
+                display: block;
+                width: 140px;
+                height: 2px;
+                background-color: $main_yellow_color;            
+        }   
+        &::before {
+            @include sep_line;
+        }
+        &::after {
+            @include sep_line;
+        }
+    color: $main_yellow_color;
+    i {
+        font-size: $icon_size;
+        margin: 0 ($icon_size/3);
+    }
+    }
+}  
+
